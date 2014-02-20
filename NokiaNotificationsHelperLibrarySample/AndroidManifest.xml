@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2014 Nokia Corporation and/or its subsidiary(-ies).
+    See the license text file delivered with this project for more information.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nokia.example.nnahelperlibrarysample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Push Notifications requires Android SDK version 4.1 (API level 16) or above. -->
+    <!-- The targetSdkVersion is optional, but it's always a good practice
+         to target higher versions. -->
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16"/>
+
+    <!-- Push Notifications connects to Internet services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <permission android:name="com.nokia.example.nnahelperlibrarysample.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.nokia.example.nnahelperlibrarysample.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="com.nokia.pushnotifications.permission.RECEIVE" />
+
+    <!-- Main activity. -->
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.nokia.example.nnahelperlibrarysample.DemoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          BroadcastReceiver that will receive intents from Push Notifications
+          services and handle them to the custom IntentService.
+
+          The com.nokia.pushnotifications.permission.SEND permission is necessary
+          so only Push Notifications services can send data messages for the app.
+        -->
+        <receiver
+            android:name="com.nokia.push.PushBroadcastReceiver"
+            android:permission="com.nokia.pushnotifications.permission.SEND" >
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.nokia.pushnotifications.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.nokia.pushnotifications.intent.REGISTRATION" />
+                <category android:name="com.nokia.example.nnahelperlibrarysample" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of PushBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .PushIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <service android:name="com.nokia.example.nnahelperlibrarysample.PushIntentService" />
+    </application>
+
+</manifest>

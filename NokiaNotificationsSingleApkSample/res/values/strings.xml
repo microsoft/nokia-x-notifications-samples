@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2014 Nokia Corporation and/or its subsidiary(-ies).
+    See the license text file delivered with this project for more information.
+-->
+<resources>
+    <string name="app_name">Notifications Single APK Sample</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="push_registered">Push Notifications: device successfully registered! (id: %1$s)</string>
+    <string name="push_unregistered">Push Notifications: device successfully unregistered!</string>
+    <string name="push_message">Push Notifications: New message!</string>
+    <string name="push_message_many">Push Notifications: %1$s new messages!</string>
+    <string name="push_error">Push Notifications: error (%1$s).</string>
+    <string name="push_recoverable_error">Push Notifications: recoverable error (%1$s).</string>
+    <string name="push_deleted">Push Notifications: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_set_app_id">Set sender ID</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="error">Error</string>
+    <string name="notifications_not_supported">The device supports neither Nokia Notifications nor Google Cloud Messaging.</string>
+</resources>

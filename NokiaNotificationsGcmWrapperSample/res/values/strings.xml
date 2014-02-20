@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2012 Google Inc.
+    Copyright (c) 2014 Nokia Corporation and/or its subsidiary(-ies).
+    
+    See the license text file delivered with this project for more information.
+-->
+<resources>
+    <string name="app_name">Nokia Notifications GCM Wrapper Sample</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">Device successfully registered! (id: %1$s)</string>
+    <string name="gcm_unregistered">Device successfully unregistered!</string>
+    <string name="gcm_message">New message!</string>
+    <string name="gcm_message_many">%1$s new messages!</string>
+    <string name="gcm_error">Error (%1$s).</string>
+    <string name="gcm_recoverable_error">Recoverable error (%1$s).</string>
+    <string name="gcm_deleted">Server deleted %1$d pending messages!</string>
+    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_set_app_id">Set sender ID</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>
