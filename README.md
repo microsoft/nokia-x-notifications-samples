@@ -1,5 +1,5 @@
-Nokia X notifications samples
-=============================
+Nokia Notifications API samples for Nokia X
+===========================================
 
 This project contains the simple examples demonstrating how to implement and
 port an application to utilise Nokia Notifications on Nokia X software platform.
