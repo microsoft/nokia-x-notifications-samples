@@ -33,7 +33,9 @@ add-on and is located in
 
 **Note:** Google Cloud Messaging helper library (`gcm.jar`) is not provided with
 this sample. You need to obtain it from e.g. samples provided with Google APIs.
-The packages can be downloaded with Android SDK Manager.
+The package containing the library can be downloaded with Android SDK Manager;
+the name of the package is "[Deprecated] Google Cloud Messaging for Android
+Library" and it is located under Extras.
 
 When you run the application, you can set the sender ID dynamically from the
 menu. Note that in a real application you would set the sender ID as a constant
