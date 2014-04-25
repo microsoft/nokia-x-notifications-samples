@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2014 Nokia Corporation and/or its subsidiary(-ies).
+ * Copyright (c) 2014 Microsoft Mobile and/or its subsidiary(-ies).
  * See the license text file delivered with this project for more information.
  */
 
